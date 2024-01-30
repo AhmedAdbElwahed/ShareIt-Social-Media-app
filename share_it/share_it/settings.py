@@ -17,7 +17,6 @@ from pathlib import Path
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
@@ -28,7 +27,6 @@ SECRET_KEY = 'django-insecure-4738^t@p6ais2n(opuoi@g__yf*20ez(_+!g5iqk(06)x+5lzq
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
 
 # Application definition
 
@@ -50,6 +48,11 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+]
+
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
+    'account.authentication.EmailAuthBackend',
 ]
 
 ROOT_URLCONF = 'share_it.urls'
@@ -74,21 +77,19 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'share_it.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
 DATABASES = {
     'default': {
-            'ENGINE': 'django.db.backends.mysql',
-            'NAME': 'share_it',
-            'USER': 'root',
-            'PASSWORD': 'Ahmed@2252300',
-            'HOST': 'localhost',
-            'PORT': '3306',
-        }
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'share_it',
+        'USER': 'root',
+        'PASSWORD': 'Ahmed@2252300',
+        'HOST': 'localhost',
+        'PORT': '3306',
+    }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
@@ -129,7 +130,6 @@ USE_I18N = True
 
 USE_TZ = True
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
@@ -154,4 +154,3 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 # Media Config
 MEDIA_URL = 'media/'
 MEDIA_ROOT = BASE_DIR / 'media'
-
