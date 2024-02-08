@@ -1,5 +1,6 @@
 /env
 .idea
 /share_it/media
-share_it/cert.*
-share_it/urls.txt
+/share_it/cert.*
+/share_it/urls.txt
+/share_it/static/images
