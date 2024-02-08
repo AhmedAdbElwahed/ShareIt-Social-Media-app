@@ -173,8 +173,8 @@ LOGOUT_URL = 'logout'
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 # OAuth2 Google Config
-SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '78768221886-4paol5kvinnt8me4tenmouo7ahjqn04a.apps.googleusercontent.com'
-SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = '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'
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = 'XXXX XXXX XXXX'
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = 'XXXX XXXX XXXX'
 
 SOCIAL_AUTH_URL_NAMESPACE = 'social'
 
